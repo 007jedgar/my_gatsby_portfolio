@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css?family=Bitter|Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Rubik');
+
+
+.nav-links {
+    text-decoration: none;
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.nav-list {
+    display: inline-block;
+    margin: 0 2em;
+    justify-content: center;
+}
+
+.nav-container {
+    justify-content: center;
+    /* align-content: flex-start; */
+}
+
+h3 {
+    font-family: Roboto Mono;
+    color: #55286F;
+    margin: 0;
+    padding: 0;
+}
+
+h4 {
+    font-family: Rubik, sans-serif;
+    color: #272525;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    font-weight: 600;
+    text-decoration: none;
+    color: #55286F;
+}
+
+.other-links p {
+    color: #55286F;
+    font-family: Montserrat, sans-serif;
+    padding: 0;
+    margin: 0;
+    list-style-position: inside;
+}
+
+
+.subheader p {
+    text-decoration: none;
+    padding: 0;
+    list-style-position:inside;
+    margin: 0;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.content-links {
+    margin: 3em 0;
+}
+
+.content-links h4 a {
+    margin: 0;
+    padding: 0;
+}
+
+.content-links a:hover {
+    border-bottom: 3px solid #55286F;
+    margin: 0;
+}
+
+figure img {
+    width: 4em;
+    border-radius: 2em;
+    margin: 0;
+}
+
+p {
+    font-family: Roboto Mono, sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    list-style-position: inside;
+}
+
+ul, li{
+    margin: 0;
+    padding: 0;
+}
+
+.content-container {
+    background-color: #d3d3d3;
+    height: 100%;
+    width: 100%;
+    padding: 3em 25em 3em 3em;
+    overflow-y: auto;
+}
+
+.content-container p {
+    font-family: Rubik;
+    color: #fff;
+    font-size: 20px;
+    overflow-y: auto;
+}
+
+.content-container h3 {
+    font-family: Roboto Mono;
+    font-size: 30px;
+    margin-bottom: 2em;
+}
+.content-container h4 {
+    font-family: Roboto Mono;
+    font-size: 22px;
+    color: #696969;
+    margin-bottom: 2em;
+}
+
+.content-container ul {
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+
+.content-container li a {
+    font-family: Rubik;
+}
+
+.content-container a:hover {
+    border-bottom: 3px solid #55286F;
+}
+
+.page-layout {
+    display: flex;
+    margin-left: 10px;
+}
+
+.sidebar-container {
+    display: inline-block;
+    position: fixed;
+    height: 100%;
+    width: 10em;
+}
+
+@media only screen and (max-width: 310px) {
+    .content-container p {
+        font-family: Rubik;
+        color: #fff;
+        font-size: 14px;
+    }
+
+    .content-container h3 {
+        font-family: Roboto Mono;
+        font-size: 23px;
+        margin-bottom: 2em;
+    }
+    .content-container h4 {
+        font-family: Roboto Mono;
+        font-size: 15px;
+        color: #696969;
+        margin-bottom: 2em;
+    }
+}
+
+/*for screens less than 400 */
+@media only screen and (max-width: 400px) {
+
+    .content-container {
+        background-color: #d3d3d3;
+        height: 100%;
+        width: 100%;
+        padding: 0;
+    }
+
+    .content-container p {
+        font-family: Rubik;
+        color: #fff;
+        font-size: 18px;
+    }
+
+    .content-container h3 {
+        font-family: Roboto Mono;
+        font-size: 26px;
+        margin-bottom: 2em;
+    }
+    .content-container h4 {
+        font-family: Roboto Mono;
+        font-size: 18px;
+        color: #696969;
+        margin-bottom: 2em;
+    }
+
+    .content-container ul {
+        padding: 0;
+        margin: 0;
+        display: block;
+    }
+
+    .content-container li a {
+        font-family: Rubik;
+    }
+
+    .content-container a:hover {
+        border-bottom: 3px solid #55286F;
+    }
+
+    .sidebar-container {
+        padding: .2em;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    figure img {
+        width: 3em;
+        border-radius: 1.5em;
+        margin: 0;
+    }
+
+    .content-container {
+        padding-bottom: 7em;
+    }
+}
+
+/* Mobile  screen less than 850 pixels*/
+@media only screen and (max-width: 850px) {
+    .hide-mobile {
+        display: none;
+    }
+
+    .page-layout {
+        display: flex;
+        flex-direction: row;
+        margin: 0px;
+    }
+
+    .content-container {
+        background-color: #d3d3d3;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        overflow-y: auto;
+        padding: 4.2em 1.3em;
+        margin: 3em 0;
+    }
+
+    .sidebar-container {
+        z-index: 2;
+        height: 4.2em;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .top-bar {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .top-bar h4 {
+        color: #fff;
+        text-decoration: none;
+        padding: 1em 1em;
+    }
+
+    .top-bar h4 a:hover {
+        border-bottom: 3px solid #55286F;
+    }
+
+    figure img {
+        width: 3em;
+        border-radius: 1.5em;
+        margin: 0;
+    }
+}
+
+@media only screen and (min-width:851px) {
+    .hide-desktop {
+        display: none;
+    }
+
+    .content-container {
+        padding: 7em 13em 3em 2em;
+        position: fixed;
+        left: 10em;
+    }
+}
+
+@media only screen and (min-width:1024px) {
+    .cta {
+        width: 50%;
+        margin: 0 auto 4em;
+    }
+
+    .show-desktop {
+        display: block;
+        margin: 0 auto 13% auto;
+    }
+
+    .hide-desktop {
+        display: none;
+    }
+
+    .content-container {
+        padding: 10em 15em 10em 2em;
+    }
+
+    .scroll {
+        width: 30px;
+        animation: move 1s infinite alternate;
+    }
+
+    @keyframes move {
+        0% {
+            transform:  translateY(0px);
+        }
+        100% {
+            transform:  translateY(20px);
+        }
+    }
+}
+
+@media only screen and (min-width:1600px) {
+    .container {
+        width: 70%;
+    }
+}

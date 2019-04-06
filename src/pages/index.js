@@ -1,21 +1,62 @@
-import React from "react"
-import { Link } from "gatsby"
+import React, {Component} from "react"
+import Layout from "../components/Layout.js"
+import "../components/main.css"
+import Sidebar from "../components/sidebar.js"
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+class IndexPage extends Component {
+  constructor(props) {
+    super(props)
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+    this.state = {
+      color: "#fff",
+      pretty: false,
+      content: true,
+    }
+  }
+
+  handleClick = (option) => {
+    this.setState({ content: true })
+  }
+
+  handlePrettify = () => {
+    this.setState({ pretty: !this.state.pretty })
+  }
+
+  renderContent() {
+    if (this.state.content) {
+      return (
+        <div className="content-container">
+          <p>Hello, I'm Jonathan,</p>
+
+          <h3>I help small businesses and personal brands express themselves online</h3>
+          <h4>I'm a web and mobile app developer with a wide arrange of skills for problem solving and product design.</h4>
+
+          <ul className="cta-main">
+            <li><a href="#">SEE MY WORK</a></li>
+            <li><a href="#">GET IN TOUCH</a></li>
+          </ul>
+        </div>
+      )
+    }
+  }
+
+  render() {
+    return (
+      <div className="page-layout">
+        <Sidebar 
+          color={this.state.color} 
+          pretty={this.state.pretty} 
+          handleClick={this.handleClick} 
+          handlePrettify={this.handlePrettify} 
+        />
+
+        <div>
+          {this.renderContent()}
+        </div>
+       
+      </div>
+    )
+  }
+} 
 
 export default IndexPage

@@ -1,32 +1,50 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import "./main.css"
+
+const ListLink = props => (
+  <li class="nav-list" >
+    <Link class="nav-links" to={props.to}>{props.children}</Link>
+  </li>
+)
 
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
+      // background: `#A5CBC3`,
+      background: "#fff",
+      marginBottom: `1em`,
     }}
   >
     <div
       style={{
         margin: `0 auto`,
         maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+        padding: `.8em 0 0 0`,
+        display: 'flex',
+        justifyContent: 'space-between'
       }}
     >
-      <h1 style={{ margin: 0 }}>
+      <h3 >
         <Link
           to="/"
           style={{
             color: `white`,
             textDecoration: `none`,
+            alignSelf: 'center'
           }}
         >
           {siteTitle}
         </Link>
-      </h1>
+      </h3>
+      <div style={{alignItems: "center"}} class="nav-container">
+          <ul style={{ listStyle: `none` }}>
+            <ListLink to="/projects">Projects</ListLink>
+            <ListLink to="/about/">About Me</ListLink>
+            <ListLink to="/contact/">Contact</ListLink>
+          </ul>
+      </div>
     </div>
   </header>
 )
