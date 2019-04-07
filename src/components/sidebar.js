@@ -11,7 +11,7 @@ const Sidebar = ({ color, pretty, handleClick, handlePrettify }) => {
         </figure>
 
         <div className="subheader hide-mobile">
-          <h4>Jonathan Edgar</h4>
+          {/* <h4>Jonathan Edgar</h4> */}
           <p>Mobile Developer</p>            
           <p>Web Developer</p>            
           <p>Product Manager</p>
@@ -32,13 +32,13 @@ const Sidebar = ({ color, pretty, handleClick, handlePrettify }) => {
         </div>
 
         <div className="top-bar hide-desktop">
-          <h4 className="hide-desktop"><a onClick={handleClick} href="#">MENU</a></h4>
+          <h4 className="hide-desktop"><a onClick={() => handleClick('menu')} href="#">MENU</a></h4>
           
           <figure className="hide-desktop">
             <img src={me} alt="my profile"></img>
           </figure>
 
-          <h4 className="hide-desktop"><a onClick={handleClick} href="#">EMAIL</a></h4>
+          <h4 className="hide-desktop"><a onClick={() => handleClick('email')} href="#">EMAIL</a></h4>
         </div>
 
       </div>

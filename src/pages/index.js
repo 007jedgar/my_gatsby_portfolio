@@ -1,7 +1,8 @@
 import React, {Component} from "react"
-import Layout from "../components/Layout.js"
 import "../components/main.css"
 import Sidebar from "../components/sidebar.js"
+import Welcome from "../components/welcome.js"
+import Footer from "../components/footer.js"
 
 class IndexPage extends Component {
   constructor(props) {
@@ -11,11 +12,39 @@ class IndexPage extends Component {
       color: "#fff",
       pretty: false,
       content: true,
+      showMenu: false,
     }
   }
 
   handleClick = (option) => {
-    this.setState({ content: true })
+    switch(option) {
+      case 'menu':
+        return this.setState({ 
+          showMenu: !this.state.showMenu,
+        })
+      case 'email':
+        return;
+      default:
+        return option;
+    }
+  }
+
+  renderMenu() {
+    if (this.state.showMenu) {
+      return (
+        <div className="menu">
+          <ul>
+            <li><a>Projects</a></li>
+          </ul>
+          <ul>
+            <li><a>Blog</a></li>
+          </ul>
+          <ul>
+            <li><a>Contact</a></li>
+          </ul>
+        </div>
+      )
+    }
   }
 
   handlePrettify = () => {
@@ -25,19 +54,21 @@ class IndexPage extends Component {
   renderContent() {
     if (this.state.content) {
       return (
-        <div className="content-container">
-          <p>Hello, I'm Jonathan,</p>
-
-          <h3>I help small businesses and personal brands express themselves online</h3>
-          <h4>I'm a web and mobile app developer with a wide arrange of skills for problem solving and product design.</h4>
-
-          <ul className="cta-main">
-            <li><a href="#">SEE MY WORK</a></li>
-            <li><a href="#">GET IN TOUCH</a></li>
-          </ul>
-        </div>
+        <Welcome />
       )
     }
+  }
+
+  renderProjects() {
+
+  }
+
+  renderBlogs() {
+
+  }
+
+  renderContact() {
+
   }
 
   render() {
@@ -52,7 +83,10 @@ class IndexPage extends Component {
 
         <div>
           {this.renderContent()}
+          {this.renderMenu()}
+          <Footer />
         </div>
+
        
       </div>
     )
