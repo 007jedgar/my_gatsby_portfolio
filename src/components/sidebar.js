@@ -18,9 +18,9 @@ const Sidebar = ({ color, pretty, handleClick, handlePrettify }) => {
         </div>
   
         <div className="content-links hide-mobile">
-          <h4><a onClick={handleClick} href="#">Projects</a></h4>
-          <h4><a onClick={handleClick} href="#">Blog</a></h4>
-          <h4><a onClick={handleClick} href="#">Contact</a></h4>
+          <h4><Link onClick={handleClick} to="/portfolio">Projects</Link></h4>
+          <h4><Link onClick={handleClick} to="/blogs">Blog</Link></h4>
+          <h4><a onClick={handleClick} href="mailto:jedgardev@gmail.com">Contact</a></h4>
         </div>
 
         <div className="other-links hide-mobile">
@@ -38,7 +38,7 @@ const Sidebar = ({ color, pretty, handleClick, handlePrettify }) => {
             <img src={me} alt="my profile"></img>
           </figure>
 
-          <h4 className="hide-desktop"><a onClick={() => handleClick('email')} href="#">EMAIL</a></h4>
+          <h4 className="hide-desktop"><a onClick={() => handleClick('email')} href="mailto:jedgardev@gmail.com">EMAIL</a></h4>
         </div>
 
       </div>

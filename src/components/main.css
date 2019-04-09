@@ -100,14 +100,12 @@ ul, li{
     height: 100%;
     width: 100%;
     padding: 3em 25em 3em 3em;
-    overflow-y: auto;
 }
 
 .content-container p {
     font-family: Rubik;
     color: #fff;
     font-size: 20px;
-    overflow-y: auto;
 }
 
 .content-container h3 {
@@ -123,13 +121,15 @@ ul, li{
 }
 
 .content-container ul {
-    padding: 0;
+    padding: 0 0 1em 0;
     margin: 0;
-    display: block;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .content-container li a {
     font-family: Rubik;
+    /* margin: 0 3em 1em 0; */
 }
 
 .content-container a:hover {
@@ -188,6 +188,24 @@ ul, li{
 
 }
 
+.portfolio {
+    margin: 2em;
+}
+
+.phone-mockup {
+    vertical-align: middle;
+    height: 25em;
+}
+
+.project-container {
+    display: flex;
+    /* align-items: center; */
+}
+
+.proj-text {
+    margin: 3em 0;
+}
+
 @media only screen and (max-width: 310px) {
     .content-container p {
         font-family: Rubik;
@@ -213,7 +231,6 @@ ul, li{
 
     .content-container {
         background-color: #d3d3d3;
-        height: 100%;
         width: 100%;
         padding: 0;
     }
@@ -240,6 +257,7 @@ ul, li{
         padding: 0;
         margin: 0;
         display: block;
+        padding-bottom: 1em;
     }
 
     .content-container li a {
@@ -252,6 +270,12 @@ ul, li{
 
     .sidebar-container {
         padding: .2em;
+    }
+
+    .phone-mockup {
+        width: 15em;
+        height: auto;
+        align-self: center;
     }
 }
 
@@ -274,6 +298,11 @@ ul, li{
         display: none;
     }
 
+    .project-container {
+        display: inline;
+        justify-content: center;
+    }
+
     .page-layout {
         display: flex;
         flex-direction: row;
@@ -282,19 +311,18 @@ ul, li{
 
     .content-container {
         background-color: #d3d3d3;
-        height: 70%;
         width: 100%;
+        height: auto;
         text-align: center;
-        overflow-y: auto;
-        padding: 4.2em 1.3em;
-        margin: 3em 0;
+        padding: 4.2em 1.3em 0 1.3em;
+        margin: 3em 0 0 0;
     }
 
     .sidebar-container {
         z-index: 2;
         height: 4.2em;
         width: 100%;
-        background-color: rgba(255, 255, 255, 0.3);
+        background-color: rgba(255, 255, 255, 1);
     }
 
     .top-bar {
@@ -333,6 +361,15 @@ ul, li{
         padding: 7em 13em 3em 2em;
         position: fixed;
         left: 10em;
+        overflow-y: auto;
+    }
+
+    .content-container ul {
+        justify-content: left;
+    }
+    
+    .content-container li {
+        padding-right: 3em;
     }
 
     .footer {

@@ -1,32 +1,24 @@
 import React, {Component} from "react"
 import "../components/main.css"
-import Sidebar from "../components/sidebar.js"
 import Welcome from "../components/welcome.js"
-import Footer from "../components/footer.js"
+import Layout from "../components/layout";
 
 class IndexPage extends Component {
   constructor(props) {
     super(props)
 
     this.state = {
-      color: "#fff",
       pretty: false,
       content: true,
       showMenu: false,
     }
   }
 
-  handleClick = (option) => {
-    switch(option) {
-      case 'menu':
-        return this.setState({ 
-          showMenu: !this.state.showMenu,
-        })
-      case 'email':
-        return;
-      default:
-        return option;
-    }
+  handleClick = () => {
+    console.log('menu pressed')
+    this.setState({ 
+      showMenu: !this.state.showMenu,
+    })
   }
 
   renderMenu() {
@@ -34,13 +26,16 @@ class IndexPage extends Component {
       return (
         <div className="menu">
           <ul>
-            <li><a>Projects</a></li>
+            <li><a href="/">Home</a></li>
           </ul>
           <ul>
-            <li><a>Blog</a></li>
+            <li><a href="/portfolio">Projects</a></li>
           </ul>
           <ul>
-            <li><a>Contact</a></li>
+            <li><a href="/blog">Blog</a></li>
+          </ul>
+          <ul>
+            <li><a href="mailto:jedgardev@gmail.com">Contact</a></li>
           </ul>
         </div>
       )
@@ -71,24 +66,21 @@ class IndexPage extends Component {
 
   }
 
+  menuToggle = (d) => {
+    console.log(d)
+  }
+
   render() {
     return (
-      <div className="page-layout">
-        <Sidebar 
-          color={this.state.color} 
-          pretty={this.state.pretty} 
-          handleClick={this.handleClick} 
-          handlePrettify={this.handlePrettify} 
-        />
+      <Layout showMenu={this.menuToggle} >
+        <div className="page-layout">
 
-        <div>
-          {this.renderContent()}
-          {this.renderMenu()}
-          <Footer />
+          <div>
+            {this.renderContent()}
+            {this.renderMenu()}
+          </div>
         </div>
-
-       
-      </div>
+      </Layout>
     )
   }
 } 
