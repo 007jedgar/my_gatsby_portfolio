@@ -95,6 +95,12 @@ ul, li{
     padding: 0;
 }
 
+strong {
+    font-weight: 600;
+    color: #413f3f;
+}
+
+
 .content-container {
     background-color: #d3d3d3;
     height: 100%;
@@ -176,35 +182,32 @@ ul, li{
     padding: 2em;
 }
 
-.footer h3 {
-
-}
-
-.footer h4 {
-
-}
-
-.footer a {
-
-}
-
 .portfolio {
-    margin: 2em;
+    padding: 2em;
+}
+
+.portfolio h3 {
+    color: #696969;
+}
+
+.portfolio h5 {
+    font-size: 20px;
+}
+
+.proj-text p {
+    color: #272525;
 }
 
 .phone-mockup {
-    vertical-align: middle;
+    /* vertical-align: middle; */
     height: 25em;
-}
-
-.project-container {
-    display: flex;
-    /* align-items: center; */
+    margin-bottom: 0;
 }
 
 .proj-text {
-    margin: 3em 0;
+    margin: 2em 0;
 }
+
 
 @media only screen and (max-width: 310px) {
     .content-container p {
@@ -231,7 +234,6 @@ ul, li{
 
     .content-container {
         background-color: #d3d3d3;
-        width: 100%;
         padding: 0;
     }
 
@@ -276,6 +278,16 @@ ul, li{
         width: 15em;
         height: auto;
         align-self: center;
+        margin-bottom: 0;
+    }
+
+    .proj-text p {
+        color: #272525;
+    }
+
+    .proj-text h5 {
+        color: #272525;
+        font-family: Rubik;
     }
 }
 
@@ -306,13 +318,11 @@ ul, li{
     .page-layout {
         display: flex;
         flex-direction: row;
-        margin: 0px;
+        margin: 0;
     }
 
     .content-container {
         background-color: #d3d3d3;
-        width: 100%;
-        height: auto;
         text-align: center;
         padding: 4.2em 1.3em 0 1.3em;
         margin: 3em 0 0 0;
@@ -346,6 +356,15 @@ ul, li{
         border-radius: 1.5em;
         margin: 0;
     }
+
+    .proj-text {
+        margin: 0;
+        margin-bottom: 1em;
+    }
+
+    .phone-mockup {
+        margin-bottom: 0;
+    }
 }
 
 @media only screen and (min-width:851px) {
@@ -373,6 +392,39 @@ ul, li{
     }
 
     .footer {
+        display: none;
+    }
+
+    .proj-text p {
+        
+        /* width: 20em; */
+    }
+}
+
+/* For /Project larger than 900px  */
+@media only screen and (min-width: 900px) {
+    .project-container {
+        justify-content: center;
+    }
+
+
+    .project-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .proj-text {
+        text-align: left;
+    }
+
+    .proj-text p {
+        /* width: 90%; */
+        /* align-self: center; */
+    }
+}
+
+@media only screen and (max-width: 1040px) {
+    .hide-extra {
         display: none;
     }
 }
