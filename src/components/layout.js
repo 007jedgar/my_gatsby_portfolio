@@ -27,7 +27,7 @@ class Layout extends Component {
             <li><Link to="/blog">Blog</Link></li>
           </ul>
           <ul>
-            <li><a href="mailto:jedgardev@gmail.com">Contact</a></li>
+            <li><a target="_blank" href="mailto:jedgardev@gmail.com">Contact</a></li>
           </ul>
         </div>
       )
@@ -56,13 +56,13 @@ class Layout extends Component {
              {this.renderMenu()}
              </main>
              <footer>
-             <div className="footer">
-                 <h3>Want to hear more?</h3>
-   
-                 <p>For business enquiries or casual chatter send an note via email. I love to get into app development, startup life and food/coffee culture.</p>
-   
-                 <h4><a href="mailto:jedgardev@gmail.com">jedgardev@gmail.com</a></h4>
-             </div>
+              <div className="footer">
+                  <h3>Want to hear more?</h3>
+    
+                  <p>For business inquiries or casual chatter send an note via email. I love to get into app development, startup life and food/coffee culture.</p>
+    
+                  <h4><a target="_blank" href="mailto:jedgardev@gmail.com">jedgardev@gmail.com</a></h4>
+              </div>
              </footer>
            </div>
          </>

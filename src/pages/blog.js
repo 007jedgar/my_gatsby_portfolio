@@ -1,15 +1,14 @@
 import React from "react"
-import { Link, StaticQuery, graphql } from "gatsby"
+import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-// import Project from "../components/project"
 
 const Blog = () => (
   <Layout>
-    <SEO title="Page two" />
+    <SEO title="Blog" />
     <div className="page-layout">
-      <div className="content-container">
+      <div className="content-container" style={{paddingBottom: "2em"}}>
         <h2>Blog posts coming soon</h2>
         <Link className="link-blog" to="/">Back to the homepage</Link>
       </div>

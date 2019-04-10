@@ -1,7 +1,8 @@
 import React, {Component} from "react"
 import "../components/main.css"
 import Welcome from "../components/welcome.js"
-import Layout from "../components/layout";
+import Layout from "../components/layout"
+import SEO from "../components/seo"
 
 class IndexPage extends Component {
   constructor(props) {
@@ -72,7 +73,8 @@ class IndexPage extends Component {
 
   render() {
     return (
-      <Layout showMenu={this.menuToggle} >
+      <Layout showMenu={this.menuToggle}>
+        <SEO title="Home" /> 
         <div className="page-layout">
 
           <div>
