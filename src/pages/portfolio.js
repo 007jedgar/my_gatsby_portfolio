@@ -44,7 +44,7 @@ const Work = () => (
                             <h5>Pixe Mobile App</h5>
                             <p>The first project I managed was a social media app. It allowed it's users to follow groups of people or organizations rather than just individuals. </p>
                             <p className="hide-extra"><strong>Built in:</strong> Native iOS frontend and AWS backend.</p>
-                            <p className="hide-extra"><strong>Note:</strong> This was my introduction to app development. While I did more designing than I did coding on this project, seeing a software project from beginning to end was so benificial.</p>
+                            <p className="hide-extra"><strong>Note:</strong> This was my introduction to app development. While I did more designing than I did coding on this project, seeing a software project from beginning to end has proven to be helpful.</p>
                         </div>
                     </div>
                 </div>

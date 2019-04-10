@@ -33,13 +33,55 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Jonathan-Edgar`,
+        short_name: `JE Dev`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon-large.png`, // This path is relative to the root of the site.
+        icons: [
+          {
+            src: `/images/favicon-large.png`,
+            sizes: `600x600`,
+            type: `image/png`,
+          },
+          {
+            src: `/images/favicon-310x310.png`,
+            sizes: `310x310`,
+            type: `image/png`,
+          },
+          {
+            src: `/images/favicon-144x144.png`,
+            sizes: `144x144`,
+            type: `image/png`,
+          },
+          {
+            src: `/images/favicon-96x96.png`,
+            sizes: `96x96`,
+            type: `image/png`,
+          },
+          {
+            src: `/images/apple-icon-72x72.png`,
+            sizes: `72x72`,
+            type: `image/png`,
+          },
+          {
+            src: `/images/android-icon-48x48.png`,
+            sizes: `48x48`,
+            type: `image/png`,
+          },
+          {
+            src: `/images/favicon-32x32.png`,
+            sizes: `32x32`,
+            type: `image/png`,
+          },
+          {
+            src: `/images/favicon-16x16.png`,
+            sizes: `16x16`,
+            type: `image/png`,
+          },
+        ]
       },
     },
     {
