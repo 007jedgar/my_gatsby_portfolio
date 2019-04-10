@@ -39,16 +39,21 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/favicon-large.png`, // This path is relative to the root of the site.
+        icon: `src/images/fav-j.png`, // This path is relative to the root of the site.
         icons: [
           {
-            src: `/images/favicon-large.png`,
-            sizes: `600x600`,
+            src: `/images/fav-j.png`,
+            sizes: `577x600`,
             type: `image/png`,
           },
           {
             src: `/images/favicon-310x310.png`,
             sizes: `310x310`,
+            type: `image/png`,
+          },
+          {
+            src: `/images/apple-icon-114x114.png`,
+            sizes: `114x114`,
             type: `image/png`,
           },
           {
@@ -62,7 +67,7 @@ module.exports = {
             type: `image/png`,
           },
           {
-            src: `/images/apple-icon-72x72.png`,
+            src: `/images/android-icon-72x72.png`,
             sizes: `72x72`,
             type: `image/png`,
           },
