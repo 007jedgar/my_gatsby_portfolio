@@ -32,9 +32,9 @@ class Header extends Component {
     
             <div className="other-links hide-mobile">
               <p>Other Links</p>
-              <p><a href="https://github.com/007jedgar">Github</a> <br /></p>
-              <p><a href="https://twitter.com/jon_eaux">Twitter</a> <br /></p>
-              <p><a href="https://www.instagram.com/jon.a.la.mode/">Instagrm</a> <br /></p>
+              <p><a href="https://github.com/007jedgar" target="_blank">Github</a> <br /></p>
+              <p><a href="https://twitter.com/jon_eaux" target="_blank">Twitter</a> <br /></p>
+              <p><a href="https://www.instagram.com/jon.a.la.mode/" target="_blank">Instagrm</a> <br /></p>
             </div>
     
             <div className="top-bar hide-desktop">
@@ -44,7 +44,7 @@ class Header extends Component {
                 <img src={me} alt="my profile"></img>
               </figure>
     
-              <h4 className="hide-desktop"><a href="mailto:jedgardev@gmail.com">EMAIL</a></h4>
+              <h4 className="hide-desktop"><a href="mailto:jedgardev@gmail.com" target="_blank">EMAIL</a></h4>
             </div>
     
           </div>

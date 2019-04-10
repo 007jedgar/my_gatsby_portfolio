@@ -395,9 +395,8 @@ strong {
         display: none;
     }
 
-    .proj-text p {
-        
-        /* width: 20em; */
+    .portfolio {
+        padding-top: 4em;
     }
 }
 
@@ -451,6 +450,10 @@ strong {
     .scroll {
         width: 30px;
         animation: move 1s infinite alternate;
+    }
+
+    .portfolio {
+        padding-top: 4em;
     }
 
     @keyframes move {

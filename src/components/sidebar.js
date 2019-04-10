@@ -11,7 +11,6 @@ const Sidebar = ({ color, pretty, handleClick, handlePrettify }) => {
         </figure>
 
         <div className="subheader hide-mobile">
-          {/* <h4>Jonathan Edgar</h4> */}
           <p>Mobile Developer</p>            
           <p>Web Developer</p>            
           <p>Product Manager</p>
@@ -25,10 +24,9 @@ const Sidebar = ({ color, pretty, handleClick, handlePrettify }) => {
 
         <div className="other-links hide-mobile">
           <p>Other Links</p>
-          <p><a href="#">Github</a> <br /></p>
-          <p><a href="#">Twitter</a> <br /></p>
-          <p><a href="#">Instagrm</a> <br /></p>
-          {/*<p><a onClick={handlePrettify} href="#">Make site {pretty? "simple": "pretty"}</a> <br /></p> */}
+          <p><a href="#" target="_blank">Github</a> <br /></p>
+          <p><a href="#" target="_blank">Twitter</a> <br /></p>
+          <p><a href="#" target="_blank">Instagrm</a> <br /></p>
         </div>
 
         <div className="top-bar hide-desktop">

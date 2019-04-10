@@ -21,8 +21,8 @@ const Work = () => (
                         <div className="proj-text">
                             <h5>Demia Mobile App and Website</h5>
                             <p>A mobile platform for finding your child a mentor or students mentoring their peers. The project was developed By me and a co-founder to help address some of the problems with private tutoring. </p>
-                            <p className="hide-extra">Built in: React Native (Javascript framework for native mobile applications), Google Firebase (backend).</p>
-                            <p className="hide-extra">Note: It was an incredibly fun project! I got to work with payments, messaging and email all on a serverless backend.</p>
+                            <p className="hide-extra"><strong>Built in:</strong> React Native (Javascript framework for native mobile applications), Google Firebase (backend).</p>
+                            <p className="hide-extra"><strong>Note:</strong> It was an incredibly fun project! I got to work with payments, messaging and email all on a serverless backend.</p>
                         </div>
                     </div>
                     <div className="project-container">
@@ -41,7 +41,8 @@ const Work = () => (
                         <div className="proj-text">
                             <h5>Pixe Mobile App</h5>
                             <p>The first project I managed was a social media app. It allowed it's users to follow groups of people or organizations rather than just individuals. </p>
-                            <p className="hide-extra">Built in: Native iOS AWS servers hosting PHP laravel.</p>
+                            <p className="hide-extra"><strong>Built in:</strong> Native iOS frontend and AWS backend.</p>
+                            <p className="hide-extra"><strong>Note:</strong> This was my introduction to app development. While I did more designing than I did coding on this project, seeing a software project from beginning to end was so benificial.</p>
                         </div>
                     </div>
                 </div>
