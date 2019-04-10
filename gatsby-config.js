@@ -39,41 +39,21 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/fav-j.png`, // This path is relative to the root of the site.
+        icon: `src/images/android-chrome-512x512.png`, // This path is relative to the root of the site.
         icons: [
           {
-            src: `/images/fav-j.png`,
-            sizes: `577x600`,
+            src: `/images/android-chrome-512x512.png.png`,
+            sizes: `512x512`,
             type: `image/png`,
           },
           {
-            src: `/images/favicon-310x310.png`,
-            sizes: `310x310`,
-            type: `image/png`,
-          },
-          {
-            src: `/images/apple-icon-114x114.png`,
-            sizes: `114x114`,
-            type: `image/png`,
-          },
-          {
-            src: `/images/favicon-144x144.png`,
-            sizes: `144x144`,
-            type: `image/png`,
-          },
-          {
-            src: `/images/favicon-96x96.png`,
+            src: `/images/android-chrome-192x192.png`,
             sizes: `96x96`,
             type: `image/png`,
           },
           {
-            src: `/images/android-icon-72x72.png`,
-            sizes: `72x72`,
-            type: `image/png`,
-          },
-          {
-            src: `/images/android-icon-48x48.png`,
-            sizes: `48x48`,
+            src: `/images/apple-touch-icon.png`,
+            sizes: `180x180`,
             type: `image/png`,
           },
           {
