@@ -1,6 +1,5 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import { graphql } from "gatsby"
 import "./main.css"
 import Img from "gatsby-image";
 
