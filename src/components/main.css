@@ -205,6 +205,18 @@ strong {
     margin-bottom: 0;
 }
 
+.phone-showcase {
+    /* vertical-align: middle; */
+    height: 15em;
+    margin-bottom: 0;
+}
+
+.phone-show {
+    /* vertical-align: middle; */
+    height: 13.5em;
+    margin-bottom: 0;
+}
+
 .proj-text {
     margin: 2em 0;
 }
@@ -279,6 +291,18 @@ strong {
         width: 15em;
         height: auto;
         align-self: center;
+        margin-bottom: 0;
+    }
+
+    .phone-showcase {
+        /* vertical-align: middle; */
+        height: 10em;
+        margin-bottom: 0;
+    }
+    
+    .phone-show {
+        /* vertical-align: middle; */
+        height: 10em;
         margin-bottom: 0;
     }
 
@@ -364,6 +388,18 @@ strong {
     }
 
     .phone-mockup {
+        margin-bottom: 0;
+    }
+
+    .phone-showcase {
+        /* vertical-align: middle; */
+        height: 10em;
+        margin-bottom: 0;
+    }
+    
+    .phone-show {
+        /* vertical-align: middle; */
+        height: 8em;
         margin-bottom: 0;
     }
 }

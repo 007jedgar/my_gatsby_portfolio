@@ -32,9 +32,9 @@ class IndexPage extends Component {
           <ul>
             <li><a href="/portfolio">Projects</a></li>
           </ul>
-          <ul>
+          {/* <ul>
             <li><a href="/blog">Blog</a></li>
-          </ul>
+          </ul> */}
           <ul>
             <li><a href="mailto:jedgardev@gmail.com">Contact</a></li>
           </ul>

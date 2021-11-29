@@ -7,7 +7,7 @@ const Welcome = () =>
     <div className="content-container">
         <p>Hello, I'm Jonathan,</p>
 
-        <h3>I build beautiful online experiences.</h3>
+        <h3>I build beautiful in-app experiences.</h3>
         <h4>I'm a web and mobile app developer with a wide range of skills for problem solving and product development.</h4>
 
         <ul className="cta-main">
