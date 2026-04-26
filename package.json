@@ -4,30 +4,26 @@
   "description": "My website and blog",
   "version": "0.1.0",
   "author": "Jonathan Edgar <jedgardev@gmail.com>",
+  "engines": {
+    "node": ">=20 <23"
+  },
   "dependencies": {
-    "gatsby": "^2.3.5",
-    "gatsby-image": "^2.0.37",
-    "gatsby-plugin-image": "^1.14.0",
-    "gatsby-plugin-manifest": "^2.12.1",
-    "gatsby-plugin-offline": "^2.0.25",
-    "gatsby-plugin-react-helmet": "^3.0.11",
-    "gatsby-plugin-sharp": "^2.14.4",
-    "gatsby-plugin-typography": "^2.2.10",
-    "gatsby-remark-copy-linked-files": "^2.0.11",
-    "gatsby-remark-images": "^3.0.10",
-    "gatsby-source-filesystem": "^2.11.1",
-    "gatsby-transformer-remark": "^2.3.8",
-    "gatsby-transformer-sharp": "^2.12.1",
+    "gatsby": "^5.14.0",
+    "gatsby-plugin-image": "^3.14.0",
+    "gatsby-plugin-manifest": "^5.14.0",
+    "gatsby-plugin-sharp": "^5.14.0",
+    "gatsby-remark-copy-linked-files": "^6.14.0",
+    "gatsby-remark-images": "^7.14.0",
+    "gatsby-source-filesystem": "^5.14.0",
+    "gatsby-transformer-remark": "^6.14.0",
+    "gatsby-transformer-sharp": "^5.14.0",
     "prop-types": "^15.7.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.0",
-    "react-typography": "^0.16.19",
-    "sharp": "^0.29.1",
-    "typography": "^0.16.19"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "prettier": "^1.16.4"
+    "@babel/core": "^7.28.0",
+    "prettier": "^3.6.2"
   },
   "keywords": [
     "gatsby"
@@ -36,7 +32,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write src/**/*.{js,jsx}",
+    "format": "prettier --write \"src/**/*.{js,jsx,json,md,css}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""

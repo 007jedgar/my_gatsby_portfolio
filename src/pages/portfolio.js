@@ -1,58 +1,139 @@
 import React from "react"
 import Layout from "../components/layout.js"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import "../components/main.css"
-import { graphql, StaticQuery, Link } from "gatsby"
 
-import img3 from "../images/pixe.png"
-import teachero from "../images/teachero_show.png"
-import showcase from "../images/med_showcase.png"
+function getPreviewSrc(href) {
+  // Uses thum.io to render a live screenshot preview.
+  // If you prefer local, replace with imported images from src/images.
+  return `https://image.thum.io/get/width/1200/crop/900/${href}`
+}
+
+const WEBSITES = [
+  {
+    name: "Corki",
+    domain: "corkiapp.com",
+    href: "https://corkiapp.com",
+    appStoreHref: "https://apps.apple.com/us/app/corki-wine-pairing-intel/id6761977264",
+    playStoreHref: "https://play.google.com/store/apps/details?id=com.corki.app",
+    subtitle: "Cross-platform wine pairing app.",
+    blurb: "A React Native app I use for restaurant discovery, menu scanning, pairing recommendations, and saving the wines and dishes I want to remember.",
+    details: [
+      "Built with Expo, including Expo Maps, animations, and camera/menu upload flows.",
+      "Shares the wine-consulting backend with Cork Commerce: Next.js App Router API routes, Supabase auth/Postgres, Trigger.dev jobs, and Cloudflare Workers for heavier AI pairing work.",
+      "Uses Groq, OpenAI, and Google Places for menu parsing, wine discovery, pairing logic, restaurant search, and place metadata.",
+    ],
+    pills: ["React Native", "Expo", "Supabase", "Cloudflare Workers", "Trigger.dev"],
+  },
+  {
+    name: "Pasteproof",
+    domain: "pasteproof.com",
+    href: "https://pasteproof.com",
+    subtitle: "Open-source DLP tooling platform.",
+    blurb: "A data loss prevention platform for catching sensitive content where people actually paste and share it.",
+    details: [
+      "Built across a WXT browser extension, Next.js dashboard, Cloudflare Workers, and Supabase.",
+      "Experiments with ONNX models for in-browser classification so some detection can happen locally before data leaves the browser.",
+    ],
+    pills: ["Open source", "DLP", "WXT", "Next.js", "ONNX"],
+  },
+  {
+    name: "Cork Commerce",
+    domain: "corkcommerce.com",
+    href: "https://corkcommerce.com",
+    subtitle: "Wine consulting and pairing infrastructure.",
+    blurb: "A restaurant wine consulting project backed by the same production pairing system that powers Corki.",
+    details: [
+      "Next.js API routes handle authenticated profiles, saved pairings, ratings, trials, upvotes, restaurant lists, guest requests, menu extraction, and job polling.",
+      "Supabase provides auth, Postgres data, row-level security patterns, admin service clients, and user privacy export/delete flows.",
+      "Trigger.dev and Cloudflare Workers run long-running scrape, menu, free-pairing, wine discovery, and failure/cancellation workflows outside normal web requests.",
+    ],
+    pills: ["Next.js", "Supabase", "Trigger.dev", "Groq", "Google Places"],
+  },
+]
 
 const Work = () => (
     <Layout>
-        <SEO title="Portfolio" />
         <div className="page-layout">
             <div className="content-container portfolio">
-                <p>PORTFOLIO</p>
+                <div className="section-kicker">Portfolio</div>
 
-                <h3>Selected Projects</h3>
+                <h3 style={{ marginTop: "0.9em" }}>Personal projects</h3>
+                <h4 style={{ marginBottom: "0.4em" }}>Products I actually use, run, and keep improving across mobile, web, browser extension, and backend infrastructure.</h4>
 
-                <div>
-                    <div className="project-container">
-                        <img className="phone-showcase" src={showcase} />
-
-                        <div className="proj-text">
-                            <h5><a href="https://demia.app">Demia Mobile App</a></h5>
-                            <p>
-                                A mobile app launched Feb 2021. It’s purpose is to keep 
-                                track of relevant classroom information. Students can create a virtual classroom 
-                                with their classmates to share notes, track due dates, schedule study sessions, 
-                                and get assignment feedback. They can also get reminders for due dates, scan syllabi to parse dates, generate essay outlines, flashcards, paragraph summaries, and generate audiobooks from textbooks using ai.
-                            </p>
-                            <p className="hide-extra"><strong>Built in:</strong> React Native (Javascript framework for native mobile applications), Firebase backend.</p>
-                            <p className="hide-extra"><strong>Note:</strong> It's an incredibly fun project! I work with payments, messaging, push notifications, deep linking, social authentication, gpt-3, text-to-speech, ML Kit, and Vision Ai</p>
+                <div className="web-grid">
+                  {WEBSITES.map(site => (
+                    <article className="web-card" key={site.domain}>
+                      <a
+                        href={site.href}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        style={{ display: "block", color: "inherit" }}
+                      >
+                        <div className="web-preview" aria-hidden="true">
+                          <img
+                            className="web-preview-img"
+                            src={getPreviewSrc(site.href)}
+                            alt=""
+                            loading="lazy"
+                            decoding="async"
+                            referrerPolicy="no-referrer"
+                            onError={e => {
+                              // Hide screenshot if blocked/unavailable; fallback styling stays.
+                              e.currentTarget.style.display = "none"
+                            }}
+                          />
+                          <div className="web-preview-inner">
+                            <div className="web-domain">{site.domain}</div>
+                            <div className="web-subtitle">{site.subtitle}</div>
+                          </div>
                         </div>
-                    </div>
-                    <div className="project-container">
-                        <img className="phone-show" src={teachero} />
+                      </a>
 
-                        <div className="proj-text">
-                            <h5><a href="https://teachero.app">Teachero Mobile App</a></h5>
-                            <p>Formerly VarsityPrep, An app that allows parents and students to schedule and pay for private atheletic, academic, and fine arts tutoring sessions.</p>
-                            <p className="hide-extra"><strong>Built in:</strong> React Native (Javascript framework for native mobile applications), Google Firebase backend.</p>
-                            <p className="hide-extra"><strong>Note:</strong> This was the first mobile app I built using React Native and I was blown away by how powerful the framework was.</p>
+                      <div className="web-card-body">
+                        <div className="web-card-title">
+                          <h5>{site.name}</h5>
+                          <a href={site.href} target="_blank" rel="noreferrer noopener">
+                            Visit
+                          </a>
                         </div>
-                    </div>
-                    {/* <div className="project-container">
-                        <img className="phone-mockup" src={img3} />
 
-                        <div className="proj-text">
-                            <h5>Pixe Mobile App</h5>
-                            <p>The first project I managed was a social media app. It allowed it's users to follow groups of people or organizations rather than just individuals. </p>
-                            <p className="hide-extra"><strong>Built in:</strong> Native iOS frontend and AWS backend.</p>
-                            <p className="hide-extra"><strong>Note:</strong> This was my introduction to app development. While I did more designing than I did coding on this project, seeing a software project from beginning to end has proven to be helpful.</p>
+                        <p style={{ marginTop: "0.8em" }}>{site.blurb}</p>
+
+                        {site.details ? (
+                          <ul className="web-detail-list">
+                            {site.details.map(detail => (
+                              <li key={detail}>{detail}</li>
+                            ))}
+                          </ul>
+                        ) : null}
+
+                        <div className="web-pill-row" aria-label={`${site.name} tags`}>
+                          {site.pills.map(pill => (
+                            <span className="web-pill" key={pill}>
+                              {pill}
+                            </span>
+                          ))}
                         </div>
-                    </div> */}
+
+                        <div className="web-links">
+                          <a href={site.href} target="_blank" rel="noreferrer noopener">
+                            {site.domain}
+                          </a>
+                          {site.appStoreHref ? (
+                            <a href={site.appStoreHref} target="_blank" rel="noreferrer noopener">
+                              App Store
+                            </a>
+                          ) : null}
+                          {site.playStoreHref ? (
+                            <a href={site.playStoreHref} target="_blank" rel="noreferrer noopener">
+                              Play Store
+                            </a>
+                          ) : null}
+                        </div>
+                      </div>
+                    </article>
+                  ))}
                 </div>
                 
             </div>
@@ -60,37 +141,6 @@ const Work = () => (
     </Layout>
 )
 
-const projectQuery = graphql `query {
-      allMarkdownRemark {
-		edges {
-        node {
-            id
-            frontmatter {
-                title
-                header
-                path
-            }
-            html
-        }
-    }
-  }
-}`
-
-
-{/* <StaticQuery query={projectQuery} render={data => {
-    return (
-        <div>
-            {data.allMarkdownRemark.edges.map(({node}) => {
-                console.log(data);
-                return <Project 
-                    key={node.id}
-                    title={node.frontmatter.title}
-                    body={node.html}
-                />
-            
-            })}
-        </div>
-    )
-}}/> */}
+export const Head = () => <Seo title="Portfolio" />
 
 export default Work;

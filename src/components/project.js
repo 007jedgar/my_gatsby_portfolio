@@ -1,7 +1,6 @@
 import React from "react"
-import { Helmet } from "react-helmet"
 import "./main.css"
-import Img from "gatsby-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 // const Project = ({ title, body, key }) => {
 //     return (
@@ -14,10 +13,11 @@ import Img from "gatsby-image";
 
 export default function Template({data}) {
     const { markdown: project } = data;
+    const image = getImage(project?.frontmatter?.image01)
     return (
         <div >
             <h4>{project.title}</h4>
-            <Img fluid={project.frontmatter.image01.childImageSharp.fluid} />
+            {image ? <GatsbyImage image={image} alt={project?.frontmatter?.title || project?.title || "Project image"} /> : null}
             <div dangerouslySetInnerHTML={{__html: project.body}}></div>
         </div>
     )

@@ -2,7 +2,7 @@ import React, {Component} from "react"
 import "../components/main.css"
 import Welcome from "../components/welcome.js"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 class IndexPage extends Component {
   constructor(props) {
@@ -16,7 +16,6 @@ class IndexPage extends Component {
   }
 
   handleClick = () => {
-    console.log('menu pressed')
     this.setState({ 
       showMenu: !this.state.showMenu,
     })
@@ -68,13 +67,12 @@ class IndexPage extends Component {
   }
 
   menuToggle = (d) => {
-    console.log(d)
+    void d
   }
 
   render() {
     return (
       <Layout showMenu={this.menuToggle}>
-        <SEO title="Home" /> 
         <div className="page-layout">
 
           <div>
@@ -86,5 +84,7 @@ class IndexPage extends Component {
     )
   }
 } 
+
+export const Head = () => <Seo title="Home" />
 
 export default IndexPage

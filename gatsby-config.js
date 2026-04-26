@@ -5,8 +5,7 @@ module.exports = {
     author: `Jonathan Edgar`,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    `gatsby-image`,
+    `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -45,14 +44,15 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        plugins: []
-      },
-    },
-    `gatsby-remark-copy-linked-files`,
-    {
-      resolve: `gatsby-remark-images`,
-      options: {
-        maxWidth: 1080,
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1080,
+            },
+          },
+          `gatsby-remark-copy-linked-files`,
+        ],
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

@@ -1,13 +1,13 @@
 import React from 'react'
 import "./main.css"
-import me from '../images/me.jpg'
+import portfolio_cropped_me from "../images/portfolio_cropped_me.jpg"
 
 const Sidebar = ({ color, pretty, handleClick, handlePrettify }) => {
     return (
       <div className="sidebar-container" style={{background: color, padding: "1em", marginBottom: "1em"}}>
         
         <figure className="hide-mobile">
-          <img src={me} alt="my profile"></img>
+          <img src={portfolio_cropped_me} alt="my profile"></img>
         </figure>
 
         <div className="subheader hide-mobile">
