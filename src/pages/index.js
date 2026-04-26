@@ -75,7 +75,7 @@ class IndexPage extends Component {
       <Layout showMenu={this.menuToggle}>
         <div className="page-layout">
 
-          <div>
+          <div className="home-page">
             {this.renderContent()}
             {this.renderMenu()}
           </div>

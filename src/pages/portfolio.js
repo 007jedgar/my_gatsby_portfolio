@@ -33,9 +33,9 @@ const WEBSITES = [
     blurb: "A data loss prevention platform for catching sensitive content where people actually paste and share it.",
     details: [
       "Built across a WXT browser extension, Next.js dashboard, Cloudflare Workers, and Supabase.",
-      "Experiments with ONNX models for in-browser classification so some detection can happen locally before data leaves the browser.",
+      "Uses Modal for AI infrastructure and experiments with ONNX models for in-browser classification so some detection can happen locally before data leaves the browser.",
     ],
-    pills: ["Open source", "DLP", "WXT", "Next.js", "ONNX"],
+    pills: ["Open source", "DLP", "WXT", "Next.js", "Modal", "ONNX"],
   },
   {
     name: "Cork Commerce",
